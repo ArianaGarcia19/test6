@@ -1,0 +1,280 @@
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background: transparent;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 40px;
+  width: auto;
+  margin-right: 0.5rem;
+}
+
+.logo-text {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: rgb(1, 1, 75);
+  font-family: fantasy;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: rgb(103, 161, 232);
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #003cd4; 
+}
+
+/* Hamburger Menu */
+.menu-toggle {
+  font-size: 2rem;
+  color:rgb(103, 161, 232);
+  display: none;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 2rem;
+    background: rgba(0,0,0,0.85);
+    flex-direction: column;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
+.hero-section {
+  position: relative;
+  height: auto;  /* or set a fixed height */
+  min-height: 200px; /* optional minimum height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+  padding: 4rem 2rem;
+}
+
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("headerimage.jpg") center/cover no-repeat;
+  filter: blur(8px) brightness(0.6);
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  padding: 0 1rem;
+}
+
+
+.about-section {
+  padding: 4rem 2rem;
+  background-color: #e6f2ff; /* light medical blue background */
+  color: #333;
+  text-align:left;
+}
+
+.about-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #005b96; /* deep blue */
+  text-align:center;
+}
+
+
+
+
+.about-photo {
+  width: 250px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.about-container {
+  text-align: center; /* centers header and logo */
+}
+
+
+
+.about-header {
+  margin: 10px 0;
+}
+
+
+.about-text {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  text-align: left;   
+}
+
+.projects-section {
+  padding: 4rem 2rem;
+  background-color: #fff;
+  color: #333;
+}
+
+.projects-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #005b96;
+  margin-bottom: 3rem;
+}
+
+.project {
+  margin-bottom: 2.5rem;
+  border-left: 4px solid #005b96;
+  padding-left: 1.2rem;
+}
+
+.project h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #00396e;
+}
+
+.project p {
+  font-size: 1rem;
+  margin-bottom: 0.8rem;
+  line-height: 1.6;
+}
+
+.project a {
+  font-weight: 500;
+  color: #67a1e8;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: all 0.3s;
+}
+
+.project a:hover {
+  color: #003cd4;
+  border-bottom: 1px solid #003cd4;
+}
+
+
+.resume-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #005b96; /* match other headings */
+  text-align: center; /* if you want consistent centering */
+}
+
+
+
+.footer-section {
+  background-color: #e6f2ff; /* soft light blue */
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.footer-section h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.contact-form {
+  max-width: 500px;
+  margin: 0 auto 30px;
+  text-align: left;
+}
+
+.contact-form .form-group {
+  margin-bottom: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.contact-form button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: #0056b3;
+}
+
+.social-icons {
+  margin-top: 20px;
+}
+
+.social-icons a img {
+  width: 30px;
+  margin: 0 10px;
+  transition: transform 0.2s ease;
+}
+
+.social-icons a img:hover {
+  transform: scale(1.2);
+}
+
+
+.social-icon {
+  margin-right: 15px; 
+  font-size: 24px; 
+  color: #333; 
+}
+
+
+.social-icon:last-child {
+  margin-right: 0;
+}
+
+
+.carousel-caption {
+  color: black !important;
+}
+
+
+
